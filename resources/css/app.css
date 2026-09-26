@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ff;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* 
+   HEADER
+*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6d28d9;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.subtitle {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* 
+   ADD BUTTON
+*/
+
+.add-button {
+    display: inline-block;
+    background: #6d28d9;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.add-button:hover {
+    background: #5b21b6;
+}
+
+/*
+   SECTION HEADER
+*/
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.task-count {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/*
+   TASK CARD
+ */
+
+.task-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* 
+   TABLE
+*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #fafafa;
+}
+
+th {
+    text-align: left;
+    padding: 16px;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 18px 16px;
+    border-top: 1px solid #eee;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: 0.15s;
+}
+
+tbody tr:hover {
+    background: #faf9ff;
+}
+
+.task-name {
+    font-weight: bold;
+    color: #111827;
+}
+
+.description {
+    color: #6b7280;
+    max-width: 300px;
+}
+
+/* STATUS
+ */
+
+.status-form {
+    margin: 0;
+}
+
+.status-select {
+    border: none;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+/*
+   DUE DATE
+*/
+
+.due-date {
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+/*
+   ACTIONS
+*/
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-button {
+    text-decoration: none;
+    color: #6d28d9;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: #f3efff;
+}
+
+.edit-button:hover {
+    background: #e9ddff;
+}
+
+.delete-button {
+    border: none;
+    color: #dc2626;
+    background: #fef2f2;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-button:hover {
+    background: #fee2e2;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+/* 
+   EMPTY STATE*/
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: #374151;
+}
+
+/*
+   BONGO CAT
+*/
+
+#bongo-cat {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 300px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#bongo-cat img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+/* 
+   MOBILE
+*/
+
+@media (max-width: 750px) {
+    .container {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .add-button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .task-card {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    #bongo-cat {
+        width: 70px;
+        bottom: 10px;
+        left: 10px;
+    }
+}
